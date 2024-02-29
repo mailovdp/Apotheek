@@ -21,3 +21,15 @@ body {
     background-color: dodgerblue;
     color: white;
   }
+
+
+
+.vierkant {
+    width: 1348px;
+    height: 300px;
+    border: 2px solid #000;
+    display: flex;
+    font-family: Arial, sans-serif;
+    position: absolute;
+   
+}
