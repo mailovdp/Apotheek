@@ -33,3 +33,16 @@ body {
     position: absolute;
    
 }
+
+.logo {
+float: left;
+padding-right: 20px;
+}
+
+
+.pill-nav {
+  float: left;
+}
+
+
+ 
