@@ -1,27 +1,36 @@
-// Initialize and add the map
-let map;
+let slideIndex = 1;
+showSlides(slideIndex);
 
-async function initMap() {
-  // The location of Uluru
-  const position = { lat: -25.344, lng: 131.031 };
-  // Request needed libraries.
-  //@ts-ignore
-  const { Map } = await google.maps.importLibrary("maps");
-  const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
-
-  // The map, centered at Uluru
-  map = new Map(document.getElementById("map"), {
-    zoom: 4,
-    center: position,
-    mapId: "DEMO_MAP_ID",
-  });
-
-  // The marker, positioned at Uluru
-  const marker = new AdvancedMarkerElement({
-    map: map,
-    position: position,
-    title: "Uluru",
-  });
+function plusSlides(n) {
+    showSlides(slideIndex += n);
 }
 
-initMap();
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+{}{}
+function showSlides(n) {
+    let i;
+    const slides = document.getElementsByClassName("mySlides");
+    if (n > slides.length) {
+        slideIndex = 1;
+    }
+    if (n < 1) {
+        slideIndex = slides.length;
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex - 1].style.display = "block";
+}
+
+function openNav() {
+        document.getElementById("mySidepanel").style.width = "250px";
+}
+    function closeNav() {
+        document.getElementById("mySidepanel").style.width = "0";
+}
+
+
+
+
