@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const page1Btn = document.getElementById("page1-btn");
     const page2Btn = document.getElementById("page2-btn");
     const page3Btn = document.getElementById("page3-btn");
-    const page4Btn = document.getElementById("page3-btn");
+    const page4Btn = document.getElementById("page4-btn");
 
     // Function to navigate to Page 1
     function goToPage1() {
@@ -28,5 +28,5 @@ document.addEventListener("DOMContentLoaded", function() {
     page1Btn.addEventListener("click", goToPage1);
     page2Btn.addEventListener("click", goToPage2);
     page3Btn.addEventListener("click", goToPage3);
-    page4Btn.addEventListener("click", goToPage3);
+    page4Btn.addEventListener("click", goToPage4);
 });
