@@ -1,0 +1,101 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff; /* white */
+    color: #333333; /* black */
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+/* Header Styles */
+header {
+    background: #007bff; /* blue */
+    color: #ffffff; /* white */
+    padding-top: 1rem;
+    min-height: 70px;
+}
+
+.nav-header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-header-main ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav-header-main ul li {
+    margin-right: 20px;
+}
+
+.nav-header-main ul li a {
+    color: #ffffff; /* white */
+    text-decoration: none;
+}
+
+/* Form Styles */
+.form-signup {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.form-signup input {
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+.signup-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.signup-button-container button {
+    padding: 10px 20px;
+    background-color: #007bff; /* blue */
+    color: #ffffff; /* white */
+    border: none;
+    cursor: pointer;
+}
+
+/* Section Styles */
+.section-default {
+    margin-top: 50px;
+}
+
+.signuperror {
+    color: red;
+}
+
+.signupsuccess {
+    color: green;
+}
+
+.login-status {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Footer Styles */
+footer {
+    background: #007bff; /* blue */
+    color: #ffffff; /* white */
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
