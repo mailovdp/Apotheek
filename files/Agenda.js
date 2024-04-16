@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Voorbeeld van een afspraak toevoegen
-    addAppointment('16-04-2024', 'Lunchafspraak met Piet');
+    addAppointment('16-04-2024', 'Afspraak maken');
 
     // Je kunt meer functionaliteit toevoegen, zoals het bewerken en verwijderen van afspraken
 });
