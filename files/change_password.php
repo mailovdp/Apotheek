@@ -18,7 +18,7 @@ if (isset($_POST['change-password-submit'])) {
 
     // Fetch user's current password from the database
     $userId = $_SESSION['userId'];
-    $sql = "SELECT pwdUsers FROM users WHERE idUsers=?;";
+    $sql = "SELECT pwdUsers FROM users WHERE idUsers=?";
     $stmt = mysqli_stmt_init($conn);
 
     if (!mysqli_stmt_prepare($stmt, $sql)) {
@@ -46,7 +46,7 @@ if (isset($_POST['change-password-submit'])) {
                 } else {
                     // Update user's password in the database
                     $hashedPwd = password_hash($newPassword, PASSWORD_DEFAULT);
-                    $sql = "UPDATE users SET pwdUsers=? WHERE idUsers=?;";
+                    $sql = "UPDATE users SET pwdUsers=? WHERE idUsers=?";
                     $stmt = mysqli_stmt_init($conn);
 
                     if (!mysqli_stmt_prepare($stmt, $sql)) {
