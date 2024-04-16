@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 require "header.php";
 
 // Check if user is logged in
