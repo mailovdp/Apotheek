@@ -6,22 +6,22 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Function to navigate to Page 1
     function goToPage1() {
-        window.location.href = "page1.html";
+        window.location.href = "A.html";
     }
 
     // Function to navigate to Page 2
     function goToPage2() {
-        window.location.href = "page2.html";
+        window.location.href = "B.html";
     }
 
     // Function to navigate to Page 3
     function goToPage3() {
-        window.location.href = "page3.html";
+        window.location.href = "C.html";
     }
 
        // Function to navigate to Page 4
        function goToPage4() {
-        window.location.href = "page4.html";
+        window.location.href = "D.html";
     }
 
     // Event listeners for button clicks
