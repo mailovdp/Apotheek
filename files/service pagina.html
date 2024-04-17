@@ -59,6 +59,7 @@
         <tr>
               <td><input type="date" id="datumInput"></td>
               <td><input type="text" id="naamInput"></td>
+              
               <td><button id="afspraakButton">Maak afspraak</button></td>
         </tr>
 </table>
@@ -72,7 +73,7 @@
         var naam = document.getElementById("naamInput").value;
 
         //  hier worden de acties uit gevoerd die je wilt wanneer er op de knop wordt geklikt
-        alert("Afspraak gemaakt op " + datum + " met " + naam);
+        alert("Afspraak gemaakt op " + naam + " met " + datum);
     });
 </script>
 
