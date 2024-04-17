@@ -1,19 +1,39 @@
 <?php
 session_start();
-require "header.php";
 
 // Check if user is logged in
 if (!isset($_SESSION['userId'])) {
-    header("Location: index.php");
+    header("Location: /apotheek/login/index.php");
     exit();
 }
 
-// Fetch user data from session
-$userId = $_SESSION['userId'];
-$userUid = $_SESSION['userUid'];
+// Include database connection file
+require 'dbh.inc.php';
 
-// You can fetch additional user data from your database if needed
+// Fetch user details from the database
+$sql = "SELECT * FROM users WHERE idUsers=?;";
+$stmt = mysqli_stmt_init($conn);
 
+if (!mysqli_stmt_prepare($stmt, $sql)) {
+    // Handle SQL error
+    // You can redirect the user or display an error message
+    exit();
+} else {
+    mysqli_stmt_bind_param($stmt, "i", $_SESSION['userId']); 
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
+    
+    if ($row = mysqli_fetch_assoc($result)) {
+        // Store user details in variables
+        $email = $row['emailUsers'];
+        $username = $row['uidUsers'];
+        $password = $row['pwdUsers'];
+    } else {
+        // User not found
+        // You can redirect the user or display an error message
+        exit();
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -21,22 +41,36 @@ $userUid = $_SESSION['userUid'];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Profile</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Profile Page</title>
+    <!-- Add your CSS stylesheets here -->
 </head>
 <body>
 
+<header>
+    <!-- Your header content here -->
+</header>
+
 <main>
-    <div class="wrapper-main">
-        <section class="section-default">
-            <h1>Welcome to your profile, <?php echo $userUid; ?>!</h1>
-            <p>This is your secure profile page.</p>
-            <!-- Add more content or functionality here as needed -->
-        </section>
+    <div class="container">
+        <h1>Welcome to your profile, <?php echo $username; ?>!</h1>
+        <p>Email: <?php echo $email; ?></p>
+        <p>Username: <?php echo $username; ?></p>
+        <p>Password: *********</p> <!-- For security reasons, don't display the password -->
+
+        <!-- Change Password Form -->
+        <h2>Change Password</h2>
+        <form action="change_password.php" method="post">
+            <input type="password" name="current-password" placeholder="Current Password">
+            <input type="password" name="new-password" placeholder="New Password">
+            <input type="password" name="confirm-password" placeholder="Confirm New Password">
+            <button type="submit" name="change-password-submit">Change Password</button>
+        </form>
     </div>
 </main>
 
-<?php require "footer.php"; ?>
+<footer>
+    <!-- Your footer content here -->
+</footer>
 
 </body>
 </html>
