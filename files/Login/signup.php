@@ -37,14 +37,13 @@ else if ($_GET["signup"] == "success") {
 ?>
 <form class="form-signup" action="./includes/signup.inc.php" method="post">
     <input type="text" name="uid" placeholder="Username">
-    <input type="email" name="mail" placeholder="E-mail">
+    <input type="text" name="mail" placeholder="E-mail">
     <input type="password" name="pwd" placeholder="Password">
     <input type="password" name="pwd-repeat" placeholder="Repeat password">
     <div class="signup-button-container">
-        <button type="submit" name="signup-submit">Signup</button>
-    </div>
+    <button type="submit" name="signup-submit">Signup</button>
+</div>
 </form>
-
 </section>
     </div>
 </main>

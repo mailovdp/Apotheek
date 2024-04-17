@@ -1,29 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <script src="chatbot.js"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Live Chat Bot</title>
+  <link rel="stylesheet" href="service pagina.css">
+<title>Service</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style> 
+
+</style>
+
 </head>
 <body>
-    <div id="chat-box">
-        <!-- Chat berichten worden hier weergegeven -->
-    </div>
-    <div class="pill-nav">
-        <a class="active" href="#home">Home</a>
-        <a href="service pagina.html">Service</a>
-        <a href="#voorlichting">Voorlichting</a>
-        <a href="#mijnapo">MijnApo</a>
-        <a href="#herhaalservice">Herhaalservice</a>
-        <a href="medicijn_overzicht.html">Medicijn</a>
-        <a href="#inchsrijven">Inschrijven</a>
+  <div class="logo">
+    <img src="logoschut.png" alt="logo" width="150"  height="150">
       </div>
-    <input type="text" id="user-input" placeholder="Typ hier je bericht...">
-    <button onclick="sendMessage()">Verstuur</button>
+    
+    <div class="Menu"> <h2>Menu</h2> </div>
 
-    <script src="script.js"></script>
-    <img src="c:\Users\kevin\Downloads\Nieuw project (14).png" alt="logo van apotheek">
+    <h1>Mijn Agenda</h1>
+<div id="calendar"></div>
+
+<script src="Agenda.js"></script>
+
+     
+<div class="pill-nav">
+  <a href="Homepage.html">Home</a>
+  <a class="active" href="service pagina.html">Service</a>
+  <a href="voorlichting.html">Voorlichting</a>
+  <a href="mijnapo.html">MijnApo</a>
+  <a href="herhaalservice.html">Herhaalservice</a>
+  <a href="medicijn_overzicht.html">Medicijn</a>
+  <a href="inschrijven.html">Inschrijven</a>
+</div>
+
+    <br><br><br><br><br><br>
+  
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mijn Bestaande Pagina</title>
+    <!-- Voeg hier eventueel andere meta-tags en externe CSS-bestanden toe -->
+</head>
+<body>
+    <!-- Hier komt de bestaande inhoud van je pagina -->
+
+    <h1>Welkom op Apotheek de schut</h1>
+
+    <!-- Plak hier de tabel met de knop voor het maken van een afspraak -->
+    <h2>Afspraken</h2>
+    
+    <table>
+        <tr>
+            <th>Datum</th>
+            <th>Tijd</th>
+            <th>Naam</th>
+            <th>Actie</th>
+        </tr>
+        <tr>
+            <td>1 april 2024</td>
+            <td>10:00</td>
+            <td>John Doe</td>
+            <td><button id="afspraakButton">Maak afspraak</button></td>
+        </tr>
+        <!-- Voeg meer rijen toe voor bestaande afspraken -->
+    </table>
+
+    <!-- Voeg hier de JavaScript toe -->
+    <script>
+        document.getElementById("afspraakButton").addEventListener("click", function() {
+            // Voer hier de acties uit die je wilt wanneer er op de knop wordt geklikt
+            alert("Hier komt het formulier voor het maken van een afspraak!");
+        });
+    </script>
 </body>
 </html>
-

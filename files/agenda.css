@@ -1,0 +1,14 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+#calendar {
+    width: 60%;
+    margin: 4 auto;
+    border: 1px solid #000000;
+    padding: 20px;
+}

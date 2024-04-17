@@ -1,0 +1,13 @@
+
+<?php 
+session_start();
+$servername ="localhost";
+$dBUsername ="root";
+$dBPassword = "";
+$dBName = "inlog";
+
+$conn = mysqli_connect($servername, $dBUsername, $dBPassword, $dBName);
+
+if (!$conn) {
+    die("Connection failed: ".mysqli_connect_error());
+}
