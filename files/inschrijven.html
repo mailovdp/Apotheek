@@ -30,6 +30,38 @@
 
     <br><br><br><br><br><br>
   
+  <h1>Wilt u lid worden van onze Apotheek?  Dat kan! </h1> <h3>Als u hier onder uw gegevens in vult dan word er contact met u opgenomen om u bij ons aan te sluiten. </h3>
+
+    <table>
+      <tr>
+          <th>Leeftijd</th>
+          <th>Naam</th>
+          <th>Adres</th>
+          <th>Email-Adres</th>
+          <th>Inschrijven</th>
+      </tr>
+
+      <tr>
+        <td><input type="date" id="datumInput"></td>
+            <td> <input type="text" id="naamInput2"> </td>
+            <td> <input type="text" id= "bledder"></td>
+            <td> <input type="text" id= "tijdInput"></td>>
+            <td><button id="afspraakButton">Inschrijven</button></td>
+      </tr>
+</table>
+
+
+    <script>
+      document.getElementById("afspraakButton").addEventListener("click", function() {
+  
+          // Dit zijn de ingevoerde waarden van de inputvelden
+         
+          var tijd =  document.getElementById("tijdInput").value;
+  
+          //  hier worden de acties uit gevoerd die je wilt wanneer er op de knop wordt geklikt
+          alert("Er is een email verzonden naar: " + tijd + " Met details over een afspraak");
+      });
+  </script>
 
 </body>
 </html> 
