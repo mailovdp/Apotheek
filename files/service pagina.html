@@ -5,23 +5,21 @@
 <title>Service</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style> 
-
 </style>
 
 </head>
+
 <body>
+
   <div class="logo">
     <img src="logoschut.png" alt="logo" width="150"  height="150">
       </div>
     
     <div class="Menu"> <h2>Menu</h2> </div>
 
-    <h1>Mijn Agenda</h1>
-<div id="calendar"></div>
-
 <script src="Agenda.js"></script>
 
-     
+ <!-- Hier komt de navigatie balk -->
 <div class="pill-nav">
   <a href="Homepage.html">Home</a>
   <a class="active" href="service pagina.html">Service</a>
@@ -34,44 +32,57 @@
 
     <br><br><br><br><br><br>
   
-    <!DOCTYPE html>
-<html lang="en">
+ <!DOCTYPE html>
+ <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mijn Bestaande Pagina</title>
-    <!-- Voeg hier eventueel andere meta-tags en externe CSS-bestanden toe -->
 </head>
-<body>
-    <!-- Hier komt de bestaande inhoud van je pagina -->
 
+<body>
+    <!-- Hier komt de bestaande inhoud van de pagina -->
     <h1>Welkom op Apotheek de schut</h1>
 
-    <!-- Plak hier de tabel met de knop voor het maken van een afspraak -->
+    <!-- Hier komt de knop om een afspraak te maken en de tabel -->
     <h2>Afspraken</h2>
     
-    <table>
+<table>
         <tr>
             <th>Datum</th>
             <th>Tijd</th>
             <th>Naam</th>
             <th>Actie</th>
         </tr>
+
         <tr>
             <td>1 april 2024</td>
             <td>10:00</td>
-            <td>John Doe</td>
+            <td>John Doe</td> id="
             <td><button id="afspraakButton">Maak afspraak</button></td>
-        </tr>
-        <!-- Voeg meer rijen toe voor bestaande afspraken -->
-    </table>
 
-    <!-- Voeg hier de JavaScript toe -->
-    <script>
-        document.getElementById("afspraakButton").addEventListener("click", function() {
-            // Voer hier de acties uit die je wilt wanneer er op de knop wordt geklikt
-            alert("Hier komt het formulier voor het maken van een afspraak!");
-        });
-    </script>
+        <tr>
+              <td><input type="date" id="datumInput"></td>
+              <td><input type="text" id="naamInput"></td>
+              <td><button id="afspraakButton">Maak afspraak</button></td>
+        </tr>
+          
+        </tr>
+ </table>
+
+    <!-- hier komt de JavaScript code  -->
+ <script>
+    document.getElementById("afspraakButton").addEventListener("click", function() {
+
+        // Dit zijn de ingevoerde waarden van de inputvelden
+        var datum = document.getElementById("datumInput").value;
+        var naam = document.getElementById("naamInput").value;
+
+        //  hier worden de acties uit gevoerd die je wilt wanneer er op de knop wordt geklikt
+        alert("Afspraak gemaakt op " + datum + " met " + naam);
+    });
+</script>
+
 </body>
 </html>
