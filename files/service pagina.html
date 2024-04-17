@@ -17,7 +17,7 @@
     
     <div class="Menu"> <h2>Menu</h2> </div>
 
-<script src="Agenda.js"></script>
+
 
  <!-- Hier komt de navigatie balk -->
 <div class="pill-nav">
@@ -57,19 +57,12 @@
         </tr>
 
         <tr>
-            <td>1 april 2024</td>
-            <td>10:00</td>
-            <td>John Doe</td> id="
-            <td><button id="afspraakButton">Maak afspraak</button></td>
-
-        <tr>
               <td><input type="date" id="datumInput"></td>
-              <td><input type="text" id="naamInput"></td>
+              <td> <input type="text" id= "tijdInput"></td>
+              <td> <input type="text" id="naamInput"> </td>
               <td><button id="afspraakButton">Maak afspraak</button></td>
         </tr>
-          
-        </tr>
- </table>
+</table>
 
     <!-- hier komt de JavaScript code  -->
  <script>
@@ -77,10 +70,11 @@
 
         // Dit zijn de ingevoerde waarden van de inputvelden
         var datum = document.getElementById("datumInput").value;
-        var naam = document.getElementById("naamInput").value;
+        var naam =  document.getElementById("naamInput").value;
+        var tijd =  document.getElementById("tijdInput").value;
 
         //  hier worden de acties uit gevoerd die je wilt wanneer er op de knop wordt geklikt
-        alert("Afspraak gemaakt op " + datum + " met " + naam);
+        alert("Geslaagd!! Uw afspraak is op " + datum + " om " + tijd );
     });
 </script>
 

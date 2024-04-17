@@ -12,36 +12,75 @@
   <h2>Medicijnen van A tot Z</h2>
 </div>
 
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <div class="A">
-        <button id="page1-btn">A</button>
-        <button id="page2-btn">B</button>
-        <button id="page3-btn">C</button>
-        <button id="page4-btn">D</button>
-        <button id="page5-btn">E</button>
-        <button id="page6-btn">F</button>
-        <button id="page7-btn">G</button>
-        <button id="page8-btn">H</button>
-        <button id="page9-btn">I</button>
-        <button id="page10-btn">J</button>
-        <button id="page11-btn">K</button>
-        <button id="page12-btn">L</button>
-        <button id="page13-btn">M</button>
-        <button id="page14-btn">N</button>
-        <button id="page15-btn">O</button>
-        <button id="page16-btn">P</button>
-        <button id="page17-btn">Q</button>
-        <button id="page18-btn">R</button>
-        <button id="page19-btn">S</button>
-        <button id="page20-btn">T</button>
-        <button id="page21-btn">U</button>
-        <button id="page22-btn">V</button>
-        <button id="page23-btn">W</button>
-        <button id="page24-btn">X</button>
-        <button id="page25-btn">Y</button>
-        <button id="page26-btn">Z</button>
-      </div>
-    </div>
+<style>
+  .button-container {
+      text-align: center;
+  }
+
+  .button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px;
+      cursor: pointer;
+  }
+
+  .button:hover {
+      background-color: #45a049;
+  }
+
+  /* Adjust the positioning of buttons to create a semi-triangular layout */
+  #page1-btn { margin-top: 0; }
+  #page2-btn, #page26-btn { margin-top: 30px; }
+  #page3-btn, #page25-btn { margin-top: 60px; }
+  #page4-btn, #page24-btn { margin-top: 90px; }
+  #page5-btn, #page23-btn { margin-top: 120px; }
+  #page6-btn, #page22-btn { margin-top: 150px; }
+  #page7-btn, #page21-btn { margin-top: 180px; }
+  #page8-btn, #page20-btn { margin-top: 210px; }
+  #page9-btn, #page19-btn { margin-top: 240px; }
+  #page10-btn, #page18-btn { margin-top: 270px; }
+  #page11-btn, #page17-btn { margin-top: 300px; }
+  #page12-btn, #page16-btn { margin-top: 330px; }
+  #page13-btn, #page15-btn { margin-top: 360px; }
+  #page14-btn, #page16-btn { margin-top: 390px; }
+</style>
+</head>
+<body>
+  <div class="A">
+<div class="button-container">
+<button id="page1-btn" class="button">A</button>
+<button id="page2-btn" class="button">B</button>
+<button id="page3-btn" class="button">C</button>
+<button id="page4-btn" class="button">D</button>
+<button id="page5-btn" class="button">E</button>
+<button id="page6-btn" class="button">F</button>
+<button id="page7-btn" class="button">G</button>
+<button id="page8-btn" class="button">H</button>
+<button id="page9-btn" class="button">I</button>
+<button id="page10-btn" class="button">J</button>
+<button id="page11-btn" class="button">K</button>
+<button id="page12-btn" class="button">L</button>
+<button id="page13-btn" class="button">M</button>
+<button id="page14-btn" class="button">N</button>
+<button id="page15-btn" class="button">O</button>
+<button id="page16-btn" class="button">P</button>
+<button id="page17-btn" class="button">Q</button>
+<button id="page18-btn" class="button">R</button>
+<button id="page19-btn" class="button">S</button>
+<button id="page20-btn" class="button">T</button>
+<button id="page21-btn" class="button">U</button>
+<button id="page22-btn" class="button">V</button>
+<button id="page23-btn" class="button">W</button>
+<button id="page24-btn" class="button">X</button>
+<button id="page25-btn" class="button">Y</button>
+<button id="page26-btn" class="button">Z</button>
+</div>
 
     <script src="medicijn_overzicht.js"></script>
 </body>
